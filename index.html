@@ -72,29 +72,35 @@
     </section>
 
     <section class="self">
-      <h2>✅ Self-assessment</h2>
-      <p>After your oral mediation, answer this question:</p>
+      <h2>🧠 Choose the best mediation</h2>
+      <p>Which response communicates all the important information clearly and naturally?</p>
 
       <form id="assessment-form" class="assessment-form">
-        <div class="question">
-          <p>Did you explain the five main ideas from the poster?</p>
+        <fieldset class="question">
+          <legend>Select one answer:</legend>
 
-          <label class="option">
-            <input type="radio" name="main-ideas" value="yes" />
-            Yes, I mentioned food, water, exercise, sleep and breaks.
+          <label class="option" data-answer="incomplete">
+            <input type="radio" name="mediation-answer" value="incomplete" />
+            <span><strong>A.</strong> The poster is about eating well and doing sport.</span>
           </label>
 
-          <label class="option">
-            <input type="radio" name="main-ideas" value="not-yet" />
-            Not yet. I left out one or more ideas.
+          <label class="option" data-answer="correct">
+            <input type="radio" name="mediation-answer" value="correct" />
+            <span><strong>B.</strong> The poster recommends eating healthy food, drinking water every day, exercising regularly, sleeping well and taking breaks.</span>
           </label>
+
+          <label class="option" data-answer="unclear">
+            <input type="radio" name="mediation-answer" value="unclear" />
+            <span><strong>C.</strong> You have to be healthy because all these habits are important.</span>
+          </label>
+        </fieldset>
+
+        <div class="button-row">
+          <button type="button" id="check-button" class="check-button">Check my answer</button>
+          <button type="button" id="try-again-button" class="try-again-button" hidden>Try again</button>
         </div>
 
-        <button type="button" id="check-button" class="check-button">
-          Check my answer
-        </button>
-
-        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
       </form>
     </section>
 
